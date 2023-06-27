@@ -10,7 +10,7 @@
 
 int _printf(const char *format, ...)
 {
-	unsigned int i = 0, num_c = 0;
+	unsigned int i = 0, num_c = 0, num_int;
 	va_list ptr_arg;
 	char *str;
 
@@ -41,6 +41,16 @@ int _printf(const char *format, ...)
 				i++;
 				num_c++;
 				_putchar('%');
+			}
+			if (format[i + 1] == 'd')
+			{
+				i += 2;
+				num_int = va_arg(ptr_arg, int);
+				num_c = print_integer(num_int);
+			}
+			if (format[i + 1] == 'i')
+			{
+				i += 2;
 			}
 		}
 		_putchar(format[i]);
