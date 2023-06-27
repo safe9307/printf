@@ -47,5 +47,6 @@ int _printf(const char *format, ...)
 		i++;
 		num_c++;
 	}
+	va_end(ptr_arg);
 	return (num_c);
 }
