@@ -51,6 +51,8 @@ int _printf(const char *format, ...)
 			if (format[i + 1] == 'i')
 			{
 				i += 2;
+				num_int = va_arg(ptr_arg, int);
+				num_c = print_integer(num_int);
 			}
 		}
 		_putchar(format[i]);
