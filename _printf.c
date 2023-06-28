@@ -1,13 +1,11 @@
 #include "main.h"
 #include <stdarg.h>
 #include <stddef.h>
-
 /**
  * _printf - function that prints and returns number of characters printed
  * @format: character string
  * Return: number of characters printed
  */
-
 int _printf(const char *format, ...)
 {
 	unsigned int i = 0, num_c = 0, num_int;
@@ -29,12 +27,7 @@ int _printf(const char *format, ...)
 			{
 				i += 2;
 				str = va_arg(ptr_arg, char *);
-				while (*str != '\0')
-				{
-					num_c++;
-					_putchar(*str);
-					str++;
-				}
+				num_c = print_string(str);
 			}
 			if (format[i + 1] == '%')
 			{
@@ -42,13 +35,7 @@ int _printf(const char *format, ...)
 				num_c++;
 				_putchar('%');
 			}
-			if (format[i + 1] == 'd')
-			{
-				i += 2;
-				num_int = va_arg(ptr_arg, int);
-				num_c = print_integer(num_int);
-			}
-			if (format[i + 1] == 'i')
+			if (format[i + 1] == 'd' || format[i + 1] == 'i')
 			{
 				i += 2;
 				num_int = va_arg(ptr_arg, int);

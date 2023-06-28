@@ -7,4 +7,6 @@ int _putchar(char character);
 
 unsigned int print_integer(unsigned int n);
 
+unsigned int print_string(char *str);
+
 #endif /* MAIN_H */
