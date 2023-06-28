@@ -4,9 +4,10 @@
  * @str: string to print
  * Return: number of characters
  */
-unsigned int print_string(char *str)
+int print_string(char *str)
 {
-	int num_c =0;
+	int num_c = 0;
+
 	while (*str != '\0')
 	{
 		num_c++;

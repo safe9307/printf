@@ -6,9 +6,9 @@
  * Return: number of characters
  */
 
-unsigned int print_integer(int n)
+int print_integer(int n)
 {
-	unsigned int num_c = 0;
+	int num_c = 0;
 
 	if (n < 0)
 	{

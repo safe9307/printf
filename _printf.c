@@ -8,8 +8,7 @@
  */
 int _printf(const char *format, ...)
 {
-	unsigned int i = 0, num_c = 0; 
-	int num_int;
+	int num_int, i = 0, num_c = 0;
 	va_list ptr_arg;
 	char *str;
 
