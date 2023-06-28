@@ -9,4 +9,6 @@ int print_integer(int n);
 
 int print_string(char *str);
 
+int in_array(char array[], int n, char x);
+
 #endif /* MAIN_H */
